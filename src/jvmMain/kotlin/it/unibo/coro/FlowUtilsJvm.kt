@@ -24,5 +24,4 @@ actual fun <T> Flow<T>.toSequence(coroutineScope: CoroutineScope): Sequence<T> {
     }
 }
 
-internal actual val backgroundScope: CoroutineScope
-    get() = CoroutineScope(SupervisorJob() + Dispatchers.Unconfined)
+internal actual val backgroundScope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Unconfined)

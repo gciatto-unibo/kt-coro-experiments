@@ -7,4 +7,4 @@ internal object PoisonPill
 
 internal expect val backgroundScope: CoroutineScope
 
-internal expect fun <T> Flow<T>.toSequence(coroutineScope: CoroutineScope = backgroundScope): Sequence<T>
+expect fun <T> Flow<T>.toSequence(coroutineScope: CoroutineScope = backgroundScope): Sequence<T>

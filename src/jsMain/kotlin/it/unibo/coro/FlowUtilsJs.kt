@@ -26,5 +26,4 @@ actual fun <T> Flow<T>.toSequence(coroutineScope: CoroutineScope): Sequence<T> {
     }.takeWhile { it != PoisonPill }.map { it.unsafeCast<T>() }
 }
 
-internal actual val backgroundScope: CoroutineScope
-    get() = CoroutineScope(SupervisorJob() + Dispatchers.Unconfined)
+internal actual val backgroundScope: CoroutineScope = CoroutineScope(SupervisorJob() + Dispatchers.Unconfined)
